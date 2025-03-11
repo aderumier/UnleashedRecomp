@@ -19,13 +19,6 @@ jobs:
           submodules: recursive
           token: ${{ secrets.ORG_TOKEN }}
 
-      - name: Checkout Private Repository
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ secrets.ASSET_REPO }}
-          token: ${{ secrets.ASSET_REPO_TOKEN }}
-          path: ./private
-
       - name: Setup ccache
         uses: hendrikmuhs/ccache-action@v1.2
         with:
